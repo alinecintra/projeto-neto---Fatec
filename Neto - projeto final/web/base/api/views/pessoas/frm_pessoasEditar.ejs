@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pessoas</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                    aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Esperança Pets</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/">Menu inicial</a>
+                    </li>
+                    <li>
+                        <a href="/pessoas/listar">Menu anterior</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <br>
+        <br>
+        <br>
+        <h3>
+            Nova pessoa
+        </h3>
+        <hr>
+        <br>
+
+        <!-- aponta para o roteamento-->
+        <form action="/pessoas/salvar" method="post">
+
+            <div class="row">
+                <div class="col-md-2 form-group">
+                    <label class="control-label">Código: </label>
+                    <input type="text" value="<%= pessoa[0].pes_codigo%>" name="pes_codigo" class="form-control" placeholder="Código" size="5"
+                        readonly>
+                </div>
+                <div class="col-md-6 form-group">
+                    <label>Nome: </label>
+                    <input type="text" value="<%= pessoa[0].pes_nome%>" name="pes_nome" class="form-control" placeholder="Nome" size="60" maxlength="50">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 form-group">
+                    <label>E-mail: </label>
+                    <input type="text" class="form-control" value="<%= pessoa[0].pes_email%>" name="pes_email" placeholder="E-mail" size="60"
+                        maxlength="50">
+                </div>
+
+                <div class="col-md-4 form-group">
+                    <label>Endereço: </label>
+                    <input type="text" class="form-control" value="<%= pessoa[0].pes_endereco%>" name="pes_endereco" placeholder="Endereço" size="57"
+                        maxlength="100">
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-4 form-group">
+                    <label>Cidade: </label>
+                    <input type="text" class="form-control" value="<%= pessoa[0].pes_cidade%>" name="pes_cidade" placeholder="Cidade" size="30"
+                        maxlength="40">
+                </div>
+
+                <div class="col-md-4 form-group">
+                    <label>Telefone: </label>
+                    <input type="text" class="form-control" value="<%= pessoa[0].pes_telefone%>" name="pes_telefone" placeholder="Telefone" size="29"
+                        maxlength="40">
+                </div>
+
+            </div>
+            <button type="submit" class="btn btn-primary">Salvar </button>
+            <a class="btn btn-danger" href="/pessoas/listar">Voltar</a>
+        </form>
+        <hr>
+    </div>
+
+    <footer>
+        <p class="text-center">
+            &#169; 2019 - Fatec Franca-SP - Programação Script - NodeJS e ExpressJS.
+        </p>
+    </footer>
+
+
+</body>
+
+</html>

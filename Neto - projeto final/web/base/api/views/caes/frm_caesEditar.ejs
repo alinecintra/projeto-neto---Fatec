@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cães</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                    aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Esperança Pets</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/">Menu inicial</a>
+                    </li>
+                    <li>
+                        <a href="/caes/listar">Menu anterior</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <br>
+        <br>
+        <br>
+        <h3>
+            Novo cão
+        </h3>
+        <hr>
+        <br>
+
+        <!-- aponta para o roteamento-->
+        <form action="/caes/salvar" method="post">
+
+            <div class="row">
+                <div class="col-md-2 form-group">
+                    <label class="control-label">Código: </label>
+                    <input type="text" value="<%= cao[0].cao_codigo%>" name="cao_codigo" class="form-control" placeholder="Código" size="5" readonly>
+                </div>
+                <div class="col-md-6 form-group">
+                    <label class="control-label">Nome: </label>
+                    <input type="text" value="<%= cao[0].cao_nome%>" name="cao_nome" class="form-control" placeholder="Nome" size="60" maxlength="50">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 form-group">
+                    <label class="control-label">Sexo: </label>
+                    <input type="text" class="form-control" value="<%= cao[0].cao_sexo%>" name="cao_sexo" placeholder="Sexo" size="5" maxlength="10">
+                </div>
+                <div class="col-md-2 form-group">
+                    <label class="control-label">Raça: </label>
+                    <input type="text" class="form-control" value="<%= cao[0].cao_raca%>" name="cao_raca" placeholder="Raça" size="15" maxlength="30">
+                </div>
+                <div class="col-md-2 form-group">
+                    <label class="control-label">Idade em meses: </label>
+                    <input type="text" class="form-control" value="<%= cao[0].cao_idade%>" name="cao_idade" placeholder="Idade" size="20" maxlength="11">
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Salvar </button>
+            <a class="btn btn-danger" href="/caes/listar">Voltar</a>
+    </div>
+    </div>
+    </form>
+    <hr>
+    </div>
+
+    <footer>
+        <p class="text-center">
+            &#169; 2019 - Fatec Franca-SP - Programação Script - NodeJS e ExpressJS.
+        </p>
+    </footer>
+
+
+</body>
+
+</html>
