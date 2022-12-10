@@ -10,7 +10,7 @@
     "body-parser": "^1.18.3",
     "consign": "^0.1.6",
     "ejs": "^2.6.1",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "moment": "^2.24.0",
     "moon": "^1.0.0-beta.2",
     "mysql": "^2.16.0"
